@@ -26,11 +26,16 @@ const Homepage = () => {
       <Box sx={{ mb: 2, fontSize: '2rem', fontWeight: 'bold' }}>
         Talky
       </Box>
-      <Box>
+
+      <Box sx={{mb:2}}>
         <Tabs value={value} onChange={handleChange} aria-label="tabs example" centered>
           <Tab label="Login" />
           <Tab label="SignUp" />
-        </Tabs>
+        </Tabs>   
+      </Box>
+      <Box>
+        {value === 0 && <Box sx={{ mt: 2 }}>Login</Box>}
+        {value === 1 && <Box sx={{ mt: 2 }}> {/* Empty for now */} </Box>}
       </Box>
     </Container>
   );
